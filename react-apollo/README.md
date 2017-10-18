@@ -28,5 +28,3 @@ See [react-apollo](https://github.com/apollographql/react-apollo) project.
 
 Documentation for [react-apollo](http://dev.apollodata.com/react/).
 
-
-
