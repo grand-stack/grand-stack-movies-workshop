@@ -1,0 +1,60 @@
+# Neo4j Database
+
+First, we need data for our application. We'll make use of the [Neo4j Recommendations Sandbox](), which contains
+
+
+![](../img/sandboxlaunch.png)
+
+// TODO: how to sign in to sandbox
+// TODO: screenshot of Recommendation dashboard detail
+
+![](../img/sandboxcreds.png)
+## The Datamodel And Exploring The Data
+
+// TODO: screenshot of datamodel
+
+![](../img/datamodel.png)
+
+
+# Exercise
+
+**The goal for this section of the workshop is to familiarize yourself with Cypher and Neo4j by writing Cypher queries to support the following features:**
+
+## Queries
+
+To support the features of our web application, we need to
+
+1. Search for movies by title substring and return movie details
+1. For a given movie, find other recommended movies
+
+
+
+
+### Movie By Title (substring)
+
+We can use the `CONTAINS` string comparison operator in Cypher to find movies whose title contains a search string. We'll use the `toLower()` function to make our comparison case insensitive.
+
+```
+MATCH ... WHERE ... CONTAINS $subString RETURN ...
+```
+
+
+### Recommended Movies
+
+For a given movie, what are other movies that someone who likes that movie also likely to enjoy? We use a combination of overlapping genres and actors (similar movie) and a simple collaborative filtering query (users who like this movie also like...).
+
+```
+MATCH ...
+...
+RETURN ... ORDER BY score DESC ...
+```
+
+
+If you get stuck, you can find the completed queries [here](answeres.md). Note that the recommendations query could be completed several different ways - there is no correct answer as long as your queries returns Movies!
+
+Once you have these queries completed, we're ready to integrate them into our GraphQL service.
+
+
+Continue to the [GraphQL section of the workshop.](/graphql)
+
+If you are unable to use the Recommendations Neo4j Sandbox, you may download the database [here](https://s3.amazonaws.com/neo4j-sandbox-usecase-datastores/v3_2/recommendations.db.zip).

@@ -1,0 +1,20 @@
+{
+  "name": "grand-stack-movies-workshop",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "history": "^4.7.2",
+    "react": "^16.0.0",
+    "react-apollo": "^1.4.16",
+    "react-dom": "^16.0.0",
+    "react-router": "^4.2.0",
+    "react-scripts": "1.0.14",
+    "semantic-ui-react": "^0.74.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
