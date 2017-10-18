@@ -5,13 +5,10 @@ First, we need data for our application. We'll make use of the [Neo4j Recommenda
 
 ![](../img/sandboxlaunch.png)
 
-// TODO: how to sign in to sandbox
-// TODO: screenshot of Recommendation dashboard detail
-
 ![](../img/sandboxcreds.png)
+
 ## The Datamodel And Exploring The Data
 
-// TODO: screenshot of datamodel
 
 ![](../img/datamodel.png)
 
