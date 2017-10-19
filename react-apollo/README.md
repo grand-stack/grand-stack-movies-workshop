@@ -69,5 +69,5 @@ Documentation for [react-apollo](http://dev.apollodata.com/react/).
 For convenience two CodeSandbox instances are available:
 
 * **begin**: [https://codesandbox.io/s/pk4219zyp0](https://codesandbox.io/s/pk4219zyp0)
-* **end**: [https://codesandbox.io/s/r21mn9ojp](https://codesandbox.io/s/r21mn9ojp)
+* **end**: [https://codesandbox.io/s/1vn07jo3j3](https://codesandbox.io/s/1vn07jo3j3)
 
