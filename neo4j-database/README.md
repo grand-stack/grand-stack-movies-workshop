@@ -47,7 +47,7 @@ RETURN ... ORDER BY score DESC ...
 ```
 
 
-If you get stuck, you can find the completed queries [here](answeres.md). Note that the recommendations query could be completed several different ways - there is no correct answer as long as your queries returns Movies!
+If you get stuck, you can find the completed queries [here](answers.md). Note that the recommendations query could be completed several different ways - there is no correct answer as long as your queries returns Movies!
 
 Once you have these queries completed, we're ready to integrate them into our GraphQL service.
 
