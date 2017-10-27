@@ -60,5 +60,4 @@ The workshop can be completed using the following hosted/demo service, without h
 
  or can be completed using standard developer tools by cloning this repository.
 
-
 To begin the workshop, begin the **[Neo4j Database](/neo4j-database)** section.
