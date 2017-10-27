@@ -51,7 +51,7 @@ and is divided into three sections. Each section has a beginning skeleton state,
 1. **[GraphQL](/graphql)**
 1. **[React / Apollo](/react-apollo)**
 
-The workshop can be completed using using the following hosted/demo service, without having to worry about setting up a local development environment (a link to the beginning skeleton state for each section is included in the README for each section):
+The workshop can be completed using the following hosted/demo service, without having to worry about setting up a local development environment (a link to the beginning skeleton state for each section is included in the README for each section):
 
 * [Neo4j Sandbox](https://neo4j.com/sandbox-v2/)
 * [Apollo Launchpad](https://launchpad.graphql.com/new)
@@ -59,6 +59,5 @@ The workshop can be completed using using the following hosted/demo service, wit
 
 
  or can be completed using standard developer tools by cloning this repository.
-
 
 To begin the workshop, begin the **[Neo4j Database](/neo4j-database)** section.
