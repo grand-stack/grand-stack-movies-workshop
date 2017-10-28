@@ -1,7 +1,10 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
+# dependencies, wherever they may be
+node_modules
+
+# Don't commit locked versions
+package-lock.json
 
 # testing
 /coverage
