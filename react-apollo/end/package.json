@@ -5,11 +5,16 @@
   "dependencies": {
     "history": "^4.7.2",
     "react": "^16.0.0",
-    "react-apollo": "^1.4.16",
+    "react-apollo": "^2.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
     "react-scripts": "1.0.14",
-    "semantic-ui-react": "^0.74.2"
+    "semantic-ui-react": "^0.74.2",
+    "graphql-tag": "^2.5.0",
+    "graphql": "^0.11.7",
+    "apollo-link-http": "^1.0.0",
+    "apollo-client": "^2.0.1",
+    "apollo-cache-inmemory": "^1.0.0"
   },
   "scripts": {
     "start": "PORT=3001 react-scripts start",

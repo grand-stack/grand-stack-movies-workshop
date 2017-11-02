@@ -1,13 +1,23 @@
-import React from 'react';
-import {Item} from 'semantic-ui-react';
-import {graphql, gql} from 'react-apollo';
+// This component is used at the beginning of the exercise as a skeleton example
+// We'll replace this component with one that uses GraphQL to fetch movies
 
-import Movie from './Movie';
+import React from "react";
+import { Item } from "semantic-ui-react";
+import { graphql} from "react-apollo";
+import gql from "graphql-tag";
+import Movie from "./Movie";
+import {Component} from "react";
 
-const MovieList = ({data}) => {
+class MovieList extends Component {
 
+  render() {
+
+    const {data} = this.props;
     if (data.loading) return <div>Loading...</div>;
-    if (data.error) return <div>Error!</div>;
+    if (data.error) {
+      console.log(data);
+      return <div>Error!</div>;
+    }
     if (data.movies.length === 0) return <div>No movies!</div>;
 
     return (
@@ -19,19 +29,23 @@ const MovieList = ({data}) => {
             poster={movie.poster}
             plot={movie.plot}
             rating={movie.imdbRating}
+            genres={movie.genres}
             similar={movie.similar}
             year={movie.year}
-            genres={movie.genres}
           />
         ))}
       </Item.Group>
     );
+
+  }
+
+
 };
 
-export default graphql(
+const MovieListWithData = graphql(
   gql`
-      query MovieListQuery($title: String!) {
-          movies(subString: $title, limit:30) {
+      query MovieListQuery($title: String!){
+          movies: movies(subString: $title, limit:10) {
               title
               movieId
               imdbRating
@@ -46,12 +60,8 @@ export default graphql(
               }
           }
       }
-  `,
-  {
-    options: props => ({
-      variables: {
-        title: props.title,
-      },
-    }),
-  },
+  `
+
 )(MovieList);
+
+export default MovieListWithData;

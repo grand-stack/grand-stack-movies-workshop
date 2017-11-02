@@ -1,19 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './components/App';
-import registerServiceWorker from './registerServiceWorker';
-import ApolloClient, {createNetworkInterface} from 'apollo-client';
-import {ApolloProvider} from 'react-apollo';
+import React from "react";
 
 
-// replace the uri here with the GraphQL endpoint for the GraphQL API you created in the previous step
-const networkInterface = createNetworkInterface({
-  uri: 'https://3wzp7qnjv.lp.gql.zone/graphql',
-});
+import App from "./components/App";
+
+import { ApolloClient } from 'apollo-client';
+import { createHttpLink } from 'apollo-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import { ApolloProvider } from 'react-apollo';
+import { render } from 'react-dom';
 
 const client = new ApolloClient({
-  networkInterface,
+  link: createHttpLink({ uri: 'https://3wzp7qnjv.lp.gql.zone/graphql' }),
+  cache: new InMemoryCache(),
 });
 
 const Root = () => (
@@ -22,6 +20,18 @@ const Root = () => (
   </ApolloProvider>
 );
 
+const styles = {
+  fontFamily: "sans-serif",
+  textAlign: "center",
+  html: {
+    margin: "8px",
+    maxWidth: "600px"
+  },
+  body: {
+    margin: "8px",
+    maxWidth: "600px"
+  }
+};
 
-ReactDOM.render(<Root />, document.getElementById('root'));
-registerServiceWorker();
+
+render(<Root />, document.getElementById("root"));
