@@ -60,7 +60,7 @@ To run neo4j locally with the above dataset, you may try these commands.  They w
 dataset, and then launch neo4j inside of a docker image using that data.
 
 ```
-curl https://s3.amazonaws.com/neo4j-sandbox-usecase-datastores/v3_2/recommendations.db.zip > /tmp/recommandations.zip
+curl https://s3.amazonaws.com/neo4j-sandbox-usecase-datastores/v3_2/recommendations.db.zip > /tmp/recommendations.zip
 cd /tmp
 unzip recommendations.zip
 mkdir -p neo4j/data/databases/
