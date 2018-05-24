@@ -1,6 +1,7 @@
 import express from 'express';
 import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 
 import { schema, rootValue, context } from './schema';
 
@@ -16,6 +17,8 @@ if (typeof process.env.NEO4J_USER === 'undefined') {
 if (typeof process.env.NEO4J_PASSWORD === 'undefined') {
   console.warn('WARNING: process.env.NEO4J_PASSWORD is not defined. Check README.md for more information');
 }
+
+server.use(cors());
 
 server.use('/graphql', bodyParser.json(), graphqlExpress(request => ({
   schema,
