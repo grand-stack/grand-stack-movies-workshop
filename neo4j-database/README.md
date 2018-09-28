@@ -1,6 +1,7 @@
 # Neo4j Database
 
-First, we need data for our application. We'll make use of the [Neo4j Recommendations Sandbox](), which contains
+First, we need data for our application. We'll make use of the [Neo4j Recommendations Sandbox](https://neo4j.com/sandbox-v2/), which contains a dataset of movie reviews.
+
 
 
 ![](../img/sandboxlaunch.png)
